@@ -11,7 +11,18 @@ public class BeanBeispielApplication {
     public static void main(String[] args) {
         SpringApplication.run(BeanBeispielApplication.class, args);
     }
+    @Bean
+    CommandLineRunner init(){
+        CommandLineRunner action = new CommandLineRunner(){
+            @Override
+            public void run(String... arg) throws Exception{
+                System.out.println("Hello World");
+            }
+        };
+        return action;
+    }
 
+    
     @Bean
     CommandLineRunner init() {
         CommandLineRunner action = new CommandLineRunner() {
