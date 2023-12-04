@@ -11,4 +11,5 @@ public class MasterV3 {
     public void delegateWork() {
         journeyman.performWork();
     }
+
 }
